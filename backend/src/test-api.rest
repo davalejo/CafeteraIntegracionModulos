@@ -1,0 +1,52 @@
+@baseUrl = http://localhost:3000/api
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YmY1ZDI0ZTcxMWM0M2IwMzYwOGE4NiIsImNvcnJlbyI6ImFkbWluQGV4YW1wbGUuY29tIiwiaWF0IjoxNzU3MzcxNzc1LCJleHAiOjE3NTc0MDA1NzV9._cY836s9iwPTZuLsfzNlbPl_BvD-mCjnPgmVaP2N9-U
+@productorId = 68bf5e68e711c43b03608a89
+
+### 1. Registro de usuario
+POST {{baseUrl}}/auth/register
+Content-Type: application/json
+
+{
+    "nombre": "Admin",
+    "correo": "admin@example.com",
+    "password": "123456"
+}
+
+### 2. Login de usuario
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+    "correo": "admin@example.com",
+    "password": "123456"
+}
+
+### 3. Crear Productor (requiere token JWT)
+POST {{baseUrl}}/productores
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "nombre": "Juan Pérez",
+    "correo": "juan@example.com",
+    "telefono": "3123456789"
+}
+
+### 4. Listar Productores
+GET {{baseUrl}}/productores
+Authorization: Bearer {{token}}
+
+### 5. Crear Pedido (requiere token JWT)
+POST {{baseUrl}}/pedidos
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "producto": "Café Especial",
+    "cantidad": 10,
+    "productorId": "{{productorId}}"
+}
+
+### 6. Listar Pedidos
+GET {{baseUrl}}/pedidos
+Authorization: Bearer {{token}}

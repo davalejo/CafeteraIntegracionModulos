@@ -1,0 +1,89 @@
+# ===========================================
+# DEPENDENCIAS Y PAQUETES
+# ===========================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# ===========================================
+# VARIABLES DE ENTORNO (CRÍTICO)
+# ===========================================
+.env
+.env.local
+.env.development
+.env.production
+.env.staging
+.env.test
+
+# ===========================================
+# ARCHIVOS DE CONFIGURACIÓN SENSIBLES
+# ===========================================
+config/database.js
+config/secrets.js
+*.pem
+*.key
+*.crt
+
+# ===========================================
+# LOGS Y ARCHIVOS TEMPORALES
+# ===========================================
+logs/
+*.log
+*.log.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# ===========================================
+# ARCHIVOS DEL SISTEMA
+# ===========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ===========================================
+# EDITORES E IDEs
+# ===========================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ===========================================
+# BASES DE DATOS LOCALES
+# ===========================================
+*.db
+*.sqlite
+*.sqlite3
+data/
+dumps/
+
+# ===========================================
+# ARCHIVOS DE BUILD Y DISTRIBUCIÓN
+# ===========================================
+dist/
+build/
+coverage/
+.nyc_output/
+
+# ===========================================
+# ARCHIVOS DE TESTING
+# ===========================================
+.coverage
+coverage.lcov
+jest-coverage/
+
+# ===========================================
+# Build Angular
+# ===========================================
+/frontend/dist/
+/frontend/.angular/

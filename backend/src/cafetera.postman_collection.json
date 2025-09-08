@@ -1,0 +1,124 @@
+{
+    "info": {
+        "name": "Cafetera API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Registro de usuario",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"nombre\": \"Admin\",\n  \"correo\": \"admin@example.com\",\n  \"password\": \"123456\"\n}"
+                },
+                "url": "{{baseUrl}}/auth/register"
+            }
+        },
+        {
+            "name": "Login de usuario",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"correo\": \"admin@example.com\",\n  \"password\": \"123456\"\n}"
+                },
+                "url": "{{baseUrl}}/auth/login"
+            }
+        },
+        {
+            "name": "Crear Productor",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}"
+                    },
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"nombre\": \"Juan Pérez\",\n  \"correo\": \"juan@example.com\",\n  \"telefono\": \"3123456789\"\n}"
+                },
+                "url": "{{baseUrl}}/productores"
+            }
+        },
+        {
+            "name": "Listar Productores",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}"
+                    }
+                ],
+                "url": "{{baseUrl}}/productores"
+            }
+        },
+        {
+            "name": "Crear Pedido",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}"
+                    },
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"producto\": \"Café Especial\",\n  \"cantidad\": 10,\n  \"productorId\": \"{{productorId}}\"\n}"
+                },
+                "url": "{{baseUrl}}/pedidos"
+            }
+        },
+        {
+            "name": "Listar Pedidos",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}"
+                    }
+                ],
+                "url": "{{baseUrl}}/pedidos"
+            }
+        }
+    ],
+    "variable": [
+        {
+            "key": "baseUrl",
+            "value": "http://localhost:3000/api"
+        },
+        {
+            "key": "token",
+            "value": ""
+        },
+        {
+            "key": "productorId",
+            "value": ""
+        }
+    ]
+}
