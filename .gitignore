@@ -32,18 +32,12 @@ config/secrets.js
 # ===========================================
 logs/
 *.log
-*.log.*
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
 lerna-debug.log*
 
 # ===========================================
 # ARCHIVOS DEL SISTEMA
 # ===========================================
 .DS_Store
-.DS_Store?
-._*
 .Spotlight-V100
 .Trashes
 ehthumbs.db
@@ -81,3 +75,21 @@ coverage/
 .coverage
 coverage.lcov
 jest-coverage/
+
+# ===========================================
+# ARCHIVOS COMPILADOS Y TEMPORALES
+# ===========================================
+/tmp
+/out-tsc
+/bazel-out
+
+# ===========================================
+# ARCHIVOS MISCELÁNEOS
+# ===========================================
+.sass-cache/
+/connect.lock
+/libpeerconnection.log
+testem.log
+/typings
+/.angular/cache
+/.angular/config.json
