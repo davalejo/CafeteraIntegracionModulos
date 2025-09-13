@@ -81,9 +81,3 @@ coverage/
 .coverage
 coverage.lcov
 jest-coverage/
-
-# ===========================================
-# Build Angular
-# ===========================================
-/frontend/dist/
-/frontend/.angular/
