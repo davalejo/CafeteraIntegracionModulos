@@ -1,0 +1,32 @@
+<div class="container">
+    <h2>Productores</h2>
+
+    <button (click)="onNew()">Crear productor</button>
+
+    <div *ngIf="loading">Cargando...</div>
+    <div *ngIf="error" class="error">{{ error }}</div>
+
+    <table *ngIf="!loading && productores.length > 0" class="tabla">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Teléfono</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of productores">
+                <td>{{ p.nombre }}</td>
+                <td>{{ p.correo }}</td>
+                <td>{{ p.telefono }}</td>
+                <td>
+                    <button (click)="onEdit(p)">Editar</button>
+                    <button (click)="onDelete(p._id)">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div *ngIf="!loading && productores.length === 0">No hay productores aún.</div>
+</div>

@@ -1,0 +1,11 @@
+<h2>Registrar Pedido</h2>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <label for="producto">Producto</label>
+    <input id="producto" formControlName="producto" type="text" />
+
+    <label for="cantidad">Cantidad</label>
+    <input id="cantidad" formControlName="cantidad" type="number" />
+
+    <button type="submit" [disabled]="form.invalid">Guardar</button>
+</form>

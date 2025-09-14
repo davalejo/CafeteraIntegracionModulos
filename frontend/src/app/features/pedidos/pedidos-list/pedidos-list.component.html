@@ -1,0 +1,7 @@
+<h2>Lista de Pedidos</h2>
+
+<ul>
+    <li *ngFor="let pedido of pedidos">
+        Pedido #{{ pedido.id }} - {{ pedido.producto }} - {{ pedido.cantidad }} unidades
+    </li>
+</ul>

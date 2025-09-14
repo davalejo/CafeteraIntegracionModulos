@@ -1,0 +1,63 @@
+/* Estilo base */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F4E9D8;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenido principal */
+main {
+    padding: 2rem;
+}
+
+/* Botones */
+button {
+    padding: 0.75rem 1.5rem;
+    background-color: #A3C644;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #8aad3a;
+}
+
+/* Formularios */
+form {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.error {
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: bold;
+    color: red;
+}
